@@ -5,23 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
   <title>Scss environment playground</title>
 </head>
 
 <body>
-  <!-- Replace with your contents -->
-  <h1>Hello!</h1>
+  <i class="material-icons">check_box</i>
+  <i class="material-icons">check_box_outline_blank</i>
+  <main>
+    <div>
+      <input type="checkbox" id="original">
+      <label for="original">Some checkbox</label>
+    </div>
 
-  <p>
-    Welcome to this playground.
-  </p>
-  <p>
-    Feel free to use this environment to practice your SCSS-fu.
-  </p>
-  <p>
-    Made with ❤️ and no ☕️ from 🇲🇽.
-  </p>
-  <!-- Replace with your contents -->
+    <div>
+      <input type="checkbox" id="my-checkbox">
+      <label for="my-checkbox">Some checkbox</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="my-checkbox-2" checked>
+      <label for="my-checkbox-2">Checked</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="my-checkbox-3" disabled>
+      <label for="my-checkbox-3">Disabled, unchecked</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="my-checkbox-4" checked disabled>
+      <label for="my-checkbox-4">Disabled, checked</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="my-checkbox-5" indeterminate>
+      <label for="my-checkbox-5">Indeterminate set in JS</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="my-checkbox-6" indeterminate disabled>
+      <label for="my-checkbox-6">Disabled, indeterminate set in JS</label>
+    </div>
+  </main>
 </body>
 
 </html>
