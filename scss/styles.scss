@@ -1,8 +1,13 @@
 $main-background-color: #212121;
 $main-foreground-color: #f5f5f5;
+
 $font-size: 1.6em;
 $label-size: 1em;
 $icon-size: 1em;
+$input-color: #bada55;
+// $input-color: #b00b00;
+// $input-color: #c0ffee;
+// $input-color: #de1e7e;
 
 body {
   background-color: $main-background-color;
@@ -32,22 +37,48 @@ body {
       align-items: center;
       font-size: $label-size;
       line-height: 1.5;
+      user-select: none;
+      position: relative;
+      padding-left: $icon-size * 1.2;
 
       &::before,
       &::after {
         // background-color: tomato;
-        margin-right: 5px;
         font-family: "Material Icons", Verdana, Geneva, Tahoma, sans-serif;
         font-size: $icon-size;
+        position: absolute;
+        left: 0;
+        transition: opacity 0.4s;
+      }
+
+      &::before {
+        content: "\e834";
+        color: $input-color;
+      }
+
+      &::after {
+        content: "\e835";
       }
     }
 
-    &:checked + label::before {
-      content: "\e834";
+    &:checked + label {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 0;
+      }
     }
 
-    &:not(:checked) + label::before {
-      content: "\e835";
+    &:not(:checked) + label {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: 1;
+      }
     }
   }
 }
