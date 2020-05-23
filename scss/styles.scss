@@ -1,13 +1,15 @@
 $main-background-color: #212121;
 $main-foreground-color: #f5f5f5;
 
+// $input-color: #b00b00;
+// $input-color: #c0ffee;
+// $input-color: #de1e7e;
+
 $font-size: 1.6em;
 $label-size: 1em;
 $icon-size: 1em;
 $input-color: #bada55;
-// $input-color: #b00b00;
-// $input-color: #c0ffee;
-// $input-color: #de1e7e;
+$disabled-color: #989898;
 
 body {
   background-color: $main-background-color;
@@ -40,6 +42,7 @@ body {
       user-select: none;
       position: relative;
       padding-left: $icon-size * 1.2;
+      transition: color 0.4s;
 
       &::before,
       &::after {
@@ -78,6 +81,15 @@ body {
 
       &::after {
         opacity: 1;
+      }
+    }
+
+    &:disabled {
+      & + label,
+      & + label::before,
+      & + label::after {
+        color: $disabled-color;
+        cursor: not-allowed;
       }
     }
   }
