@@ -8,7 +8,7 @@ $main-foreground-color: #f5f5f5;
 $font-size: 1.6em;
 $label-size: 1em;
 $icon-size: 1em;
-$input-color: #bada55;
+$input-color: #de1e7e;
 $disabled-color: #989898;
 
 body {
@@ -51,7 +51,7 @@ body {
         font-size: $icon-size;
         position: absolute;
         left: 0;
-        transition: opacity 0.4s;
+        transition: opacity, color 0.4s;
       }
 
       &::before {
@@ -90,6 +90,13 @@ body {
       & + label::after {
         color: $disabled-color;
         cursor: not-allowed;
+      }
+    }
+
+    &:focus {
+      & + label::before,
+      & + label::after {
+        color: darken($input-color, 15%);
       }
     }
   }
