@@ -84,6 +84,14 @@ body {
       }
     }
 
+    &:indeterminate {
+      & + label::before,
+      & + label::after {
+        content: "\e909";
+        color: lighten($input-color, 15%);
+      }
+    }
+
     &:disabled {
       & + label,
       & + label::before,

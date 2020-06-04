@@ -38,15 +38,24 @@
     </div>
 
     <div>
-      <input type="checkbox" id="my-checkbox-5" indeterminate>
+      <input type="checkbox" id="my-checkbox-5">
       <label for="my-checkbox-5">Indeterminate set in JS</label>
     </div>
 
     <div>
-      <input type="checkbox" id="my-checkbox-6" indeterminate disabled>
+      <input type="checkbox" id="my-checkbox-6" disabled>
       <label for="my-checkbox-6">Disabled, indeterminate set in JS</label>
     </div>
   </main>
+
+  <script>
+    var indeterminateInput1 = document.getElementById('my-checkbox-5');
+    var indeterminateInput2 = document.getElementById('my-checkbox-6');
+
+    indeterminateInput1.indeterminate = true;
+    indeterminateInput2.indeterminate = true;
+  </script>
+
 </body>
 
 </html>
